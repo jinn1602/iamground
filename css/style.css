@@ -1,0 +1,64 @@
+a {
+    text-decoration: none !important;
+}
+
+/*nav*/
+.navbar-default {
+    max-width: 1200px;
+    min-width: 1200px;
+}
+
+#navbarLeft {
+    background: #b61028;
+    height: 70px;
+}
+
+a.navbar-brand {
+    padding: 0 0 0 5%;
+    height: 70px;
+    color: #777;
+}
+
+/*navbarLeft*/
+#navbarLeft {
+    float: left;
+}
+
+/*navbarRight*/
+#navbarRight {
+    float: left;
+}
+
+/*nav 버튼*/
+.btn-group {
+    padding: 0 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    background: #ababab;
+}
+
+.btn.btn-primary.active:hover,
+.btn.btn.btn-primary.active {
+    background-color: #b61028;
+}
+
+.btn.btn-primary.btn-nav:hover {
+    background-color: #ababab;
+}
+
+
+.btn.btn-primary.btn-nav {
+    color: #fff;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 100px;
+}
+
+.btn-group>.btn:first-child {
+    margin-left: 0;
+}
