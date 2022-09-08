@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="우리 팀에 딱 맞는 구장을 찾아 편하게 예약해보세요!">
+    <meta name="keywords" content="실내풋살장, 풋살장대여, 풋살장, 풋살장예약, 풋살경기장">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="풋살장 예약 - 아이엠그라운드">
+    <meta property="og:description" content="우리 팀에 딱 맞는 구장을 찾아 편하게 예약해보세요!">
+    <meta property="og:image" content="https://www.iamground.kr/img/logos/logo_new.png">
+    <title>풋살장 예약 - 아이엠그라운드</title>
+    <link rel='stylesheet' type='text/css' href='/css/lib/lib.min.css?mod=20220828155519'>
+    <link rel='stylesheet' type='text/css' href='/futsal/s/search.min.css?mod=20220828155519'>
+    <link rel="shortcut icon" href="https://iamground.kr/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://iamground.kr/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '992592660859556');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=992592660859556&ev=PageView
+		&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NKDPTR" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NKDPTR');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Plugin -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1844153715797053',
+                xfbml: true,
+                version: 'v2.8'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ko_KR/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Facebook Plugin End -->
+
+    <div class="loading">
+        <div class="spinner-loader">loading&#8230;</div>
+    </div>
+    <nav class="navbar-default">
+        <div class="container-fluid">
+            <div class="col-xs-3" id="navbarLeft">
+                <a class="navbar-brand" href="/">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/filesground/img/logos/logo.png" alt="아이엠그라운드 로고">
+                </a>
+            </div>
+            <div class="col-xs-9" id="navbarRight">
+                <div class="navbar-left">
+                    <div class="btn-group fac-btn">
+                        <button id="search" class="btn btn-default btn-primary btn-nav"
+                            onclick="window.location.href = '/futsal/search';">
+                            구장 검색
+                        </button>
+                    </div>
+                    <div class="btn-group team-btn">
+                        <button id="s_match" style="padding: 5.5px 20px;" class="btn btn-default btn-primary btn-nav"
+                            onclick="window.open('http://m.iamground.kr/futsal/s_match/search');">
+                            개인풋살매치 Beta<img src="/img/icons/new.png"
+                                style="height: 20px;margin-left: 10px;top: -1px;position: relative;">
+                        </button>
+                    </div>
+                    <div class="btn-group team-btn">
+                        <button id="team" class="btn btn-default btn-primary btn-nav"
+                            onclick="window.location.href = '/futsal/team';">
+                            팀 관리
+                        </button>
+                    </div>
+                    <!--<div class="btn-group league-btn">
+						<button id="league" class="btn btn-default btn-primary btn-nav" onclick="window.location.href = '/futsal/league/';">
+							리 그
+						</button>
+					</div>-->
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="echo" echChk="0"><a><i class="glyphicon glyphicon-comment"></i>도움말</a></li>
+                    <li id="join"><a>회원 가입</a></li>
+                    <li id="login"><a>로그인</a></li>
+                </ul>
+                <div id="inWindow"></div>
+            </div>
+        </div>
+    </nav>
+    <div id="pageContainer" class="container-fluid">
+        <div class="col-xs-3">
+            <div id="leftContainer" class="col-xs-12">
+                <div class="menu-container">
+                    <div class="col-sm-12 title" id="calendar-title">
+                        <img src="/img/icons/gu.png" />
+                        <h4>날짜 선택</h4>
+                        <span class="glyphicon glyphicon-minus gly-cal"></span>
+                    </div>
+                    <div class="col-sm-12" id="calendarHolder">
+                        <div class="col-sm-12" id="calendar"></div>
+                        <div class="col-sm-12" id="calendar_helper"></div>
+                        <div class="time-slider">
+                            <div class="col-sm-12 slider-top open-slider" style="display:none;">
+                                <div class="col-sm-4 use-time-title">
+                                    <p class="help-block">이용 시간대</p>
+                                </div>
+                                <div class="col-sm-8 use-time">
+                                    <p class="slider-out"></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 slider">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 title" id="nmap-title">
+                        <img src="/img/icons/nmap.png" />
+                        <h4>지도</h4>
+                        <span class="glyphicon glyphicon-minus gly-nmap"></span>
+                    </div>
+                    <div id="nmap"></div>
+                    <!--<div class="col-sm-12 title" id="detail-title">
+     <img src="/img/icons/detail.png"/>
+     <h4>상세 검색</h4>
+     <span class="glyphicon glyphicon-minus gly-det"></span>
+   </div>-->
+                    <div class="col-sm-12" id="detail"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <div id="rightContainer" class="col-xs-12">
+                <div class="ad-space">
+                </div>
+                <div class="title main-title">
+                    <h3 class="title-name">예약 가능 구장</h3>
+                    <h5>아이엠그라운드 제휴 구장</h5>
+                </div>
+                <div id="search_tag" class="col-sm-12"></div>
+                <div id="cardHolder" class="col-sm-12">
+                </div>
+                <div style="height:1px; width:1px; overflow:hidden">
+                    <img src="/img/icons/chun.png" />
+                    <img src="/img/icons/in.png" />
+                    <img src="/img/icons/mo.png" />
+                    <img src="/img/icons/pla.png" />
+                    <img src="/img/icons/ur.png" />
+                    <img src="/img/icons/wood.png" />
+                    <img src="/img/icons/jo.png" />
+                    <img src="/img/icons/ju.png" />
+                    <img src="/img/icons/sh.png" />
+                    <img src="/img/icons/temp.png" />
+                    <img src="/img/icons/janx.png" />
+                    <img src="/img/icons/jox.png" />
+                    <img src="/img/icons/jux.png" />
+                    <img src="/img/icons/shx.png" />
+                    <img src="/img/icons/tempx.png" />
+                    <img src="/img/icons/unknown.png" />
+                    <img id="mapIcon" src="/img/icons/pinfut.svg" />
+                    <img id="mapIconCo" src="/img/icons/pinfut_co.svg" />
+                    <img src="/img/maps/201.png" />
+                    <img src="/img/maps/202.png" />
+                    <img src="/img/maps/203.png" />
+                    <img src="/img/maps/204.png" />
+                    <img src="/img/maps/205.png" />
+                    <img src="/img/maps/206.png" />
+                    <img src="/img/maps/207.png" />
+                    <img src="/img/maps/208.png" />
+                    <img src="/img/maps/311.png" />
+                    <img src="/img/maps/312.png" />
+                    <img src="/img/maps/313.png" />
+                    <img src="/img/maps/314.png" />
+                    <img src="/img/maps/315.png" />
+                    <img src="/img/maps/316.png" />
+                    <img src="/img/ad/main/co_find_no_button.jpg" />
+                    <img src="/img/ad/main/facebook_event.jpg" />
+                    <img src="/img/ad/main/facebook_event_button.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-space"></div>
+    <footer id="footer">
+        <div class="row">
+            <div id="footerLeft" class="col-xs-4">
+                <a href="/"><img src="/img/logos/logo.png"></a>
+                <div>Copyright &copy; 2016, MEMER.D Co., Ltd.</div>
+            </div>
+            <div id="footerMid" class="col-xs-4">
+                <div><a href="/footer/privacyPolice">개인정보 보호 정책</a></div>
+                <div><a href="/footer/accessTerm">이용 약관</a></div>
+                <div><a href="/footer/ZUCK">회사 소개 / 광고문의</a></div>
+            </div>
+            <div id="footerRight" class="col-xs-4">
+                <p>주식회사 미머디&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp대표자 : 차성욱&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp사업자 등록번호 : 801 88
+                    00089(통신판매업 신고번호: 2019-대전유성-0239)</p>
+                <p>주소 : 대전광역시 유성구 대덕대로 582, 4층 402호(도룡동, 옥토빌딩)</p>
+                <p>고객문의 : 카카오톡 검색 - 아이엠그라운드 ( 10시-23시 )</p>
+                <p>대표번호 : 070-7825-3300 ( 평일 10:00-19:30 )</p>
+            </div>
+        </div>
+    </footer>
+    <div id="template">
+
+    </div>
+    <script type="text/javascript">
+        var SERVER = {};
+
+        SERVER.time = 1661669719709.2;
+        SERVER.timestamp = 1661669719709.2;
+        SERVER.service = 'fut';
+    </script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type='text/javascript' src='/js/lib/lib.min.js?mod=20220828155519'></script>
+    <script type='text/javascript'
+        src='https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=p5bjd2qsex?mod=20220828155519'></script>
+    <script type='text/javascript' src='/futsal/s/search.min.js?mod=20220828155519'></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
